@@ -1,0 +1,105 @@
+.footer {
+  background: #1a1a1a;
+  color: white;
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+/* LEFT SECTION */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-about {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* SOCIAL LINKS */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffa500;
+}
+
+/* MIDDLE SECTION */
+.footer-middle h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle li {
+  margin: 8px 0;
+}
+
+.footer-middle a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-middle a:hover {
+  color: #ffa500;
+}
+
+/* RIGHT SECTION */
+.footer-right h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-right p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+}
+
+.address {
+  line-height: 1.4;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  grid-column: 1 / 4;
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #aaa;
+}

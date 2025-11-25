@@ -1,0 +1,144 @@
+/* ===================== GENERAL PAGE STYLE ===================== */
+.menu-page {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===================== TOP BUTTONS ===================== */
+.menu-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.menu-btn {
+  padding: 10px 20px;
+  background:amber;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.menu-btn:hover {
+  background: #555;
+}
+
+/* ===================== DROPDOWN CONTAINER ===================== */
+.dropdown {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ===================== SECTION TITLES ===================== */
+.dropdown-section {
+  margin-bottom: 12px;
+}
+
+.dropdown-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 12px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===================== INNER TITLES (Sub Categories) ===================== */
+.inner-title {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #fff;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===================== INNER CONTENT ===================== */
+.inner-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+  padding-left: 8px;
+}
+
+.inner-content.open {
+  max-height: 500px;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* ===================== PRICE LIST (Name left, Price right) ===================== */
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 5px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.item-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.item-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* ===================== SIMPLE LIST (Used in drinks & desserts) ===================== */
+.dropdown-list {
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.dropdown-list li {
+  margin: 6px 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 480px) {
+  .menu-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .dropdown {
+    padding: 12px;
+  }
+
+  .price-list li {
+    padding: 6px 0;
+  }
+}
