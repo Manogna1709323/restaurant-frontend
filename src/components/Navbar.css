@@ -30,24 +30,34 @@
 }
 
 /* BUTTONS */
+/* ✅ SHARED BUTTON STYLE */
 .menu-btn,
 .cust-btn {
-  padding: 8px 16px;
-  background: #d35400;
+  min-width: 90px;          
+  height: 40px;            
+  padding: 0 18px;        
+  background: #d35400;    
   border: none;
   color: white;
   font-size: 14px;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 3px 8px rgba(211, 84, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* ✅ SAME HOVER FOR BOTH */
 .menu-btn:hover,
 .cust-btn:hover {
-  background: #b64800;
+  background: #d35400;    /* ✅ NO color change */
   transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(211, 84, 0, 0.18);
 }
+
 
 /* NAV LINKS */
 .nav-link {
@@ -58,4 +68,8 @@
 
 .nav-link:hover {
   color: #d35400 !important;
+}
+/* ✅ Remove underline from all navbar links */
+.navbar a {
+  text-decoration: none !important;
 }
