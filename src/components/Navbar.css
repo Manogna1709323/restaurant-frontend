@@ -1,171 +1,61 @@
-/* NAVBAR CONTAINER */
-.navbar {
-  width: 100%;
-  padding: 18px 40px;        /* tighter padding so items fit in one line */
-  padding-bottom: 10px;
-  height: 82px;              /* fixed height makes alignment predictable */
-  display: flex;
-  align-items: center;       /* vertical center */
-  justify-content: space-between;
-  gap: 20px;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-  z-index: 50;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  min-width: 160px;          /* ensures logo area keeps spacing */
-}
-
-/* Logo image */
 .logo-img {
-  height: 56px;              /* increased logo size slightly */
+  height: 56px;
   width: auto;
   object-fit: contain;
-  cursor: pointer;
-  display: block;
-}
-
-/* NAVIGATION LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  flex: 1;                   /* grow so links sit between logo and right section */
-  justify-content: center;   /* center nav links horizontally */
-  align-items: center;
-}
-
-.nav-links li {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #333;
-  transition: color 0.18s ease, transform 0.12s ease;
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-
-.nav-links li a:hover {
-  color: #d35400;
-  transform: translateY(-2px);
-  background: rgba(211, 84, 0, 0.04);
-}
-
-/* RIGHT SECTION */
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-width: 210px;          /* keeps menu and icons together */
-  justify-content: flex-end;
-  padding-right: 20px;
 }
 
 /* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-/* social link wrapper styling (circle bg) */
 .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;               /* clickable area */
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.06);
   transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.12s ease;
   text-decoration: none;
 }
 
-/* icon (increase size) */
 .nav-icon {
-  font-size: 18px;           /* bigger icon */
+  font-size: 18px;
   color: #333;
-  pointer-events: none;      /* icon itself shouldn't intercept clicks */
+  pointer-events: none;
 }
 
-/* hover effects on icon wrapper */
 .social-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   background: rgba(211, 84, 0, 0.12);
   box-shadow: 0 6px 14px rgba(211, 84, 0, 0.08);
 }
 
-/* MENU BUTTON */
-.menu-btn {
-  padding: 10px 16px;
-  background: #d35400;
-  border: none;
-  color: white;
-  font-size: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
-  box-shadow: 0 3px 8px rgba(211, 84, 0, 0.12);
-}
-
-.menu-btn:hover {
-  background: #b64800;
-  transform: translateY(-2px);
-}
-
+/* BUTTONS */
+.menu-btn,
 .cust-btn {
-  padding: 10px 16px;
+  padding: 8px 16px;
   background: #d35400;
   border: none;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  transition: all 0.15s ease;
   box-shadow: 0 3px 8px rgba(211, 84, 0, 0.12);
 }
 
+.menu-btn:hover,
 .cust-btn:hover {
   background: #b64800;
   transform: translateY(-2px);
 }
 
-/* small-screen adjustments (keeps items on one line as much as possible) */
-@media (max-width: 880px) {
-  .nav-links {
-    gap: 18px;
-    font-size: 15px;
-    justify-content: center;
-  }
-
-  .logo {
-    min-width: 120px;
-  }
-
-  .social-link {
-    width: 36px;
-    height: 36px;
-  }
-
-  .nav-icon {
-    font-size: 16px;
-  }
+/* NAV LINKS */
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333 !important;
 }
 
-/* collapse nav-links at very small widths (you can change to a hamburger later) */
-@media (max-width: 620px) {
-  .nav-links {
-    display: none; /* hide links on very small devices so layout stays in one line */
-  }
+.nav-link:hover {
+  color: #d35400 !important;
 }

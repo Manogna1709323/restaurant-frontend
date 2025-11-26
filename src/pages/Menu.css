@@ -1,31 +1,31 @@
 /* ===================== GENERAL PAGE STYLE ===================== */
 .menu-page {
   width: 100%;
-  max-width: 700px;
+  max-width: 1100px;               /* ✅ Better for tablets & laptops */
   margin: auto;
-  padding: 20px;
+  padding: clamp(12px, 4vw, 24px);
   font-family: "Poppins", sans-serif;
 }
 
 /* ===================== TOP BUTTONS ===================== */
 .menu-buttons {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;                /* ✅ Allows wrapping on small screens */
   gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
-  overflow-x: auto;
 }
 
 .menu-btn {
   padding: 10px 20px;
-  background:amber;
+  background: #ff4d2d;            /* ✅ amber fix */
   color: white;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   font-weight: 600;
   transition: 0.2s ease;
+  font-size: clamp(13px, 3vw, 16px);
 }
 
 .menu-btn:hover {
@@ -35,14 +35,14 @@
 /* ===================== DROPDOWN CONTAINER ===================== */
 .dropdown {
   background: #fff;
-  padding: 15px;
+  padding: clamp(12px, 3vw, 18px);
   border-radius: 12px;
   box-shadow: 0 0 6px rgba(0,0,0,0.15);
   margin-bottom: 20px;
 }
 
 .category-title {
-  font-size: 22px;
+  font-size: clamp(18px, 4vw, 22px);
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
@@ -54,7 +54,7 @@
 }
 
 .dropdown-title {
-  font-size: 18px;
+  font-size: clamp(15px, 3vw, 18px);
   font-weight: 600;
   padding: 10px 12px;
   background: #f3f3f3;
@@ -67,7 +67,7 @@
 
 /* ===================== INNER TITLES (Sub Categories) ===================== */
 .inner-title {
-  font-size: 16px;
+  font-size: clamp(14px, 3vw, 16px);
   font-weight: 600;
   padding: 8px 12px;
   background: #fff;
@@ -82,16 +82,15 @@
 .inner-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
   padding-left: 8px;
 }
 
 .inner-content.open {
-  max-height: 500px;
-  transition: max-height 0.4s ease-in-out;
+  max-height: 1200px;             /* ✅ Prevents content cutting */
 }
 
-/* ===================== PRICE LIST (Name left, Price right) ===================== */
+/* ===================== PRICE LIST ===================== */
 .price-list {
   list-style: none;
   padding: 0;
@@ -101,22 +100,24 @@
 .price-list li {
   display: flex;
   justify-content: space-between;
-  padding: 8px 5px;
-  border-bottom: 1px solid #e6e6e6;
+  gap: 10px;
+  padding: 8px 2px;
+  border-bottom: 1px dashed #ccc;
+  flex-wrap: wrap;               /* ✅ Prevents overflow on small phones */
 }
 
 .item-name {
-  font-size: 15px;
+  font-size: clamp(14px, 3vw, 15px);
   font-weight: 500;
 }
 
 .item-price {
-  font-size: 15px;
+  font-size: clamp(14px, 3vw, 15px);
   font-weight: 600;
   color: #444;
 }
 
-/* ===================== SIMPLE LIST (Used in drinks & desserts) ===================== */
+/* ===================== SIMPLE LIST ===================== */
 .dropdown-list {
   list-style: none;
   padding-left: 10px;
@@ -126,19 +127,23 @@
 .dropdown-list li {
   margin: 6px 0;
 }
+
+/* ===================== VEG FILTER ===================== */
 .veg-filter-buttons {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin: 12px 0 18px 0;
 }
 
 .veg-filter-buttons button {
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 6px;
   border: none;
   font-weight: 600;
   cursor: pointer;
   background: #ececec;
+  font-size: clamp(13px, 3vw, 15px);
 }
 
 .veg-filter-buttons .active-btn {
@@ -146,23 +151,7 @@
   color: white;
 }
 
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 480px) {
-  .menu-btn {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-
-  .dropdown {
-    padding: 12px;
-  }
-
-  .price-list li {
-    padding: 6px 0;
-  }
-}
-
+/* ===================== TABS ===================== */
 .tab-btn {
   padding: 8px 18px;
   border-radius: 20px;
@@ -170,6 +159,7 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
+  font-size: clamp(13px, 3vw, 15px);
 }
 
 .active-tab {
@@ -177,17 +167,7 @@
   color: white;
 }
 
-.price-list {
-  list-style: none;
-  padding: 0;
-}
-
-.price-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0;
-  border-bottom: 1px dashed #ccc;
-}
+/* ===================== ARROW TOGGLE ===================== */
 .arrow-title {
   display: flex;
   justify-content: space-between;
@@ -203,6 +183,7 @@
   transform: rotate(180deg);
 }
 
+/* ===================== ANIMATION ===================== */
 .animated-box {
   max-height: 0;
   overflow: hidden;
@@ -211,7 +192,7 @@
 }
 
 .animated-box.open {
-  max-height: 400px;
+  max-height: 1200px;            /* ✅ Prevent height cut */
   opacity: 1;
   margin-top: 6px;
 }
@@ -225,3 +206,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ===================== MOBILE OPTIMIZATION ===================== */
+@media (max-width: 480px) {
+  .menu-buttons {
+    justify-content: flex-start;
+  }
+
+  .price-list li {
+    padding: 6px 0;
+  }
+}
