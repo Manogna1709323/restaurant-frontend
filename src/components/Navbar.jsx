@@ -50,6 +50,10 @@ function Navbar() {
         <Link to="/menu">
           <button className="menu-btn">Menu</button>
         </Link>
+
+        <Link to="/cust">
+          <button className="cust-btn">Cust</button>
+        </Link>
       </div>
     </nav>
   );

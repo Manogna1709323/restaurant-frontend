@@ -69,6 +69,7 @@
   gap: 16px;
   min-width: 210px;          /* keeps menu and icons together */
   justify-content: flex-end;
+  padding-right: 20px;
 }
 
 /* SOCIAL ICONS */
@@ -119,6 +120,23 @@
 }
 
 .menu-btn:hover {
+  background: #b64800;
+  transform: translateY(-2px);
+}
+
+.cust-btn {
+  padding: 10px 16px;
+  background: #d35400;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 3px 8px rgba(211, 84, 0, 0.12);
+}
+
+.cust-btn:hover {
   background: #b64800;
   transform: translateY(-2px);
 }
